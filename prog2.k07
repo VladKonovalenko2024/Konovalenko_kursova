@@ -1,0 +1,57 @@
+??Prog2
+program prog2; 
+var int16_t AAAAAAAA,BBBBBBBB,CCCCCCCC;
+start
+get AAAAAAAA;
+get BBBBBBBB;
+get CCCCCCCC;
+if(AAAAAAAA >= BBBBBBBB)
+start
+	if(AAAAAAAA >= CCCCCCCC)
+	start
+		goto Abigger;		
+	finish
+	else
+	start
+		put CCCCCCCC;
+		goto Outofif;
+		Abigger:		
+		put AAAAAAAA;
+		goto Outofif;
+	finish
+finish	
+if(BBBBBBBB <= CCCCCCCC)
+start
+	put CCCCCCCC;
+finish	
+else
+start
+	put BBBBBBBB;
+finish
+Outofif:	
+
+if((AAAAAAAA eq BBBBBBBB) and (AAAAAAAA eq CCCCCCCC) and (BBBBBBBB eq CCCCCCCC))
+start
+	put 1;
+finish	
+else
+start
+	put 0;
+finish
+if((AAAAAAAA <= 0) or (BBBBBBBB <= 0) or (CCCCCCCC <= 0))
+start
+	put -1;
+finish	
+else
+start
+	put 0;
+finish
+if(!(AAAAAAAA <= (BBBBBBBB + CCCCCCCC)))
+start
+	put(10);
+finish	
+else
+start
+	put(0);
+finish
+finish

@@ -1,0 +1,45 @@
+??Prog3
+program prog3; 
+var int16_t AAAAAAAA,AAAAAAA2,BBBBBBBB,XXXXXXXX,CCCCCCC1,CCCCCCC2;
+start
+get AAAAAAAA;
+get BBBBBBBB;
+for AAAAAAA2 ==> AAAAAAAA to BBBBBBBB do
+	put AAAAAAA2 * AAAAAAA2;
+
+for AAAAAAA2==>BBBBBBBB to AAAAAAAA do
+	put AAAAAAA2 * AAAAAAA2;
+
+XXXXXXXX==>0;
+CCCCCCC1==>0;
+while CCCCCCC1 <= AAAAAAAA 
+start
+	CCCCCCC2==>0;
+	while CCCCCCC2 <= BBBBBBBB
+	start	
+		XXXXXXXX==>XXXXXXXX + 1;
+		CCCCCCC2==>CCCCCCC2 + 1;
+	finish
+	end while
+CCCCCCC1==>CCCCCCC1 + 1;
+finish	
+end while
+put XXXXXXXX;
+
+XXXXXXXX==>0;
+CCCCCCC1==>1;
+repeat
+start
+  CCCCCCC2==>1;
+  repeat
+  start
+    XXXXXXXX==>XXXXXXXX+1;
+    CCCCCCC2==>CCCCCCC2+1;
+	finish
+  until !(CCCCCCC2 >= BBBBBBBB)
+  CCCCCCC1==>CCCCCCC1+1;
+ finish
+until !(CCCCCCC1 >= AAAAAAAA)
+put XXXXXXXX;
+
+finish
